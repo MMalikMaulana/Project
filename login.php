@@ -4,11 +4,11 @@
 
         $password = $_POST['password'];
 
-        $koneksi = msqli_connect('localhost', 'root', '','datatiga');
+        $koneksi = mysqli_connect('localhost', 'root', '','datatiga');
 
         $query ="INSERT users ('username', 'password')";
 
-        mysqli_query(($koneksi,$query));
+        mysqli_query($koneksi, $query);
     }
 ?>    
 <!DOCTYPE html>
@@ -17,6 +17,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>facebook</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Facebook</h1>
